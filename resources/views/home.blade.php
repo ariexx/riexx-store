@@ -114,44 +114,11 @@
 
                             </div>
                         </div>
-                        <x-button>Buat Pesanan</x-button>
+                        <button type="submit" class="p-6 m-4 text-black bg-gray-700">Pesan sekarang</button>
                     </div>
                 </div>
             </form>
         </div>
     </div>
 
-    <script>
-        function post() {
-            return {
-                form: {
-                    platform: '',
-                    email: '',
-                    password: '',
-                    service: '',
-                    payment: '',
-                    additional: '',
-                },
-                axiosRepsonse: '',
-                isSuccess: false,
-
-                store() {
-                    let resposne = axios.post('{{ route('home.store') }}', this.form)
-                        .then((r) => {
-                            console.log(r.data.data);
-                            this.isSuccess = true;
-                            this.axiosRepsonse = r.data.data;
-                            setTimeout(() => {
-                                this.isSuccess = false;
-                            }, 5000);
-                        }).catch((e) => {
-                            console.log(e);
-                        })
-                },
-                mounted() {
-                    console.log('mounited');
-                }
-            }
-        }
-    </script>
 </x-guest-layout>

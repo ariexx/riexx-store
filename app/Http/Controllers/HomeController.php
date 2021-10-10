@@ -21,10 +21,13 @@ class HomeController extends Controller
         ]);
     }
 
-    public function store(HomeRequest $request)
+    public function store(Request $request)
     {
-        dd($request->all());
+        // dd($email = $request->input('service'));
+        // dd($request->all());
         // $data = $request->all();
+        // $email = $request->input('email');
+        // $password = $request->input('email');
         // $data['uuid'] = "RIEX" . date('dmY') . Transaction::latest()->get('id') + 1;
         // Transaction::create($data);
 

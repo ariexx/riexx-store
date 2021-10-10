@@ -24,15 +24,11 @@ class HomeRequest extends FormRequest
     public function rules()
     {
         return [
-            'service_id' => 'required|numeric',
-            'payment_method_id' => 'required|numeric',
-            'user_detail_id' => 'required|numeric',
+            'service' => 'required|numeric',
+            'payment' => 'required|numeric',
             // 'uuid' => 'required|numeric',
             'platform' => 'required',
-            'status' => 'required',
             'additional' => 'required',
-            'total' => 'required',
-            'is_paid' => 'required',
         ];
     }
 }
